@@ -39,8 +39,8 @@
       <file leaf-file-name="JsonLoader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Model/Storage/FileLoader/JsonLoader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+            <state relative-caret-position="388">
+              <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -517,7 +517,7 @@
       <workItem from="1582875138583" duration="422000" />
       <workItem from="1582875572320" duration="6851000" />
       <workItem from="1582891072587" duration="9624000" />
-      <workItem from="1582961953439" duration="23855000" />
+      <workItem from="1582961953439" duration="23882000" />
     </task>
     <servers />
   </component>
@@ -539,7 +539,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40752000" />
+    <option name="totallyTimeSpent" value="40779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1" width="1370" height="745" extended-state="6" />
@@ -981,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Storage/FileLoader/JsonLoader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="388">
+          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
           <folding />
         </state>
       </provider>

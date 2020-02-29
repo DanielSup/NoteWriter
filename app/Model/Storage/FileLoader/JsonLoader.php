@@ -36,11 +36,11 @@ class JsonLoader implements ILoader
     }
 
     public function changeNoteInFile(Note $note, string $filename){
-        //dummy empty implementatiion - there the note with the given identificator would be changed in the array inside the JSON file and then the JSON file would be updated.
+        //dummy empty implementation - there the note with the given identificator would be changed in the array inside the JSON file and then the JSON file would be updated.
     }
 
     public function getNotesFromFile(string $filename): array{
-        //dummy implementatiion - there would be loaded notes from a JSON file given by the filename parameter.
+        //dummy implementation - there would be loaded notes from a JSON file given by the filename parameter.
         return [];
     }
 }

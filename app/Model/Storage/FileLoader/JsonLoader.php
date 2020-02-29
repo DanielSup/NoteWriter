@@ -11,6 +11,10 @@ namespace App\Model\Storage\FileLoader;
 
 use App\Model\Entity\Note;
 
+/**
+ * Class JsonLoader is for working with files in JSON format. This class should use json_encode and json_decode functions for working with JSON.
+ * @package App\Model\Storage\FileLoader
+ */
 class JsonLoader implements ILoader
 {
 

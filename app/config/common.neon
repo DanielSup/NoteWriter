@@ -48,6 +48,8 @@ services:
     jsonLoader:
         class: App\Model\Storage\FileLoader\JsonLoader
         arguments: [%file.xml.id%, %file.xml.title%, %file.xml.text%, %file.xml.date%, %file.xml.preprocessor%]
+    csvLoader:
+        class: App\Model\Storage\FileLoader\CSVLoader
     databaseStorage:
         class: App\Model\Storage\DatabaseStorage
     fileStorage:

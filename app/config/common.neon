@@ -1,0 +1,63 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+    file:
+        dsn: '/home/user/myfile.xml'
+        xml:
+            id: 'id'
+            title: 'title'
+            text: 'text'
+            date: 'dateTime'
+            preprocessor: 'preprocessor'
+            root: 'notes'
+            element: 'note'
+        json:
+            id: 'id'
+            title: 'title'
+            text: 'text'
+            date: 'dateTime'
+            preprocessor: 'preprocessor'
+
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+
+database:
+	dsn: 'mysql:host=127.0.0.1;dbname=noteWriter'
+	user: root
+	password: a
+	options:
+		lazy: yes
+
+services:
+    - App\Model\UserManager
+    - App\Model\Preprocessor\TexPreprocessor
+    - App\Model\Preprocessor\MarkdownPreprocessor
+    xmlLoader:
+        class: App\Model\Storage\FileLoader\XMLLoader
+        arguments: [%file.xml.id%, %file.xml.title%, %file.xml.text%, %file.xml.date%, %file.xml.preprocessor%, %file.xml.root%, %file.xml.element%]
+    jsonLoader:
+        class: App\Model\Storage\FileLoader\JsonLoader
+        arguments: [%file.xml.id%, %file.xml.title%, %file.xml.text%, %file.xml.date%, %file.xml.preprocessor%]
+    databaseStorage:
+        class: App\Model\Storage\DatabaseStorage
+    fileStorage:
+        class: App\Model\Storage\FileStorage
+        arguments: [%file.dsn%, @xmlLoader]
+    noteManager:
+        class: App\Model\NoteManager
+        arguments: [@fileStorage]
+    - App\Forms\FormFactory
+    - App\Forms\NoteFormFactory
+    - App\Forms\SignInFormFactory
+    - App\Forms\SignUpFormFactory
+    router: App\Router\RouterFactory::createRouter

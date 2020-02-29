@@ -1,0 +1,10 @@
+{block content}
+    <dl>
+    {foreach $notes as $note}
+        <dt>Title</dt>
+        <dd>{$note->getTitle()}</dd>
+        <dt>Text</dt>
+        <dd>{$note->getPreprocessedText()|noescape}</dd>
+    {/foreach}
+    </dl>
+{/block}

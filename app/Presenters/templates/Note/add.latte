@@ -1,0 +1,74 @@
+{block scripts}
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{$basePath}/js/nette.ajax.js"></script>
+    <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
+    <script src="{$basePath}/js/main.js"></script>
+
+    {* These JavaScripts and the JavaScript above should be imported also in the edit.latte file - these scripts ensure the change of the markdown which the user currently uses during writing or editing the note. *}
+    <script>
+        function changeText(){
+            $.nette.ajax({
+                url: {link convert!},
+                data: {"text": $("#frm-addForm-text").val(), "markdown": $("#frm-addForm-preprocessor").val()},
+                type: 'get',
+                dataType: 'json'
+            });
+
+            if($("#frm-addForm-preprocessor").val() == "none"){
+                $("#frm-addForm-editRichText").hide();
+                $("#frm-addForm-text").show();
+            } else {
+                $("#frm-addForm-editRichText").show();
+                $("#frm-addForm-text").hide();
+            }
+        }
+
+        function changeArea(){
+            {* The value  $("#frm-addForm-editRichText").html() should be stripped - extra spaces should be removed - working with string*}
+            $.nette.ajax({
+                url: {link converthtml!},
+                data: {"html": $("#frm-addForm-editRichText").html(), "markdown": $("#frm-addForm-preprocessor").val()},
+                type: 'get',
+                dataType: 'json',
+                success: function(data){
+                    {*  In this function there would be changed the value of the text field - this value is be sent. *}
+                    {*  The element with id #frm-addForm-editRichText would be hidden, if the value is none - by calling hide() on this element. *}
+                    $("#frm-addForm-text").val(data["text"]);
+                }
+            });
+        }
+    </script>
+{/block}
+
+{block content}
+
+    {* Edit form would be rendered by similar way with the snippet. *}
+    {form addForm}
+        <table>
+            <tr class="required">
+                <th>{label title /}</th>
+                <td>{input title}</td>
+            </tr>
+            <tr class="required">
+                <th>{label preprocessor /}</th>
+                <td>{input preprocessor}</td>
+            </tr>
+            <tr class="required">
+                <th>{label text /}</th>
+                <td>{input text}
+                    {snippetArea wrapper}
+                        {snippet textFill}
+                            <div contentEditable="true" id="frm-addForm-editRichText" onblur="changeArea()">
+                                {$actualText|noescape}
+                            </div>
+                        {/snippet}
+                    {/snippetArea}
+                </td>
+            </tr>
+            <tr class="required">
+                <th></th>
+                <td>{input send}</td>
+            </tr>
+        </table>
+    {/form}
+{/block}

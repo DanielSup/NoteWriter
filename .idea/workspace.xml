@@ -25,7 +25,18 @@
     <favorites_list name="noteWriter" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="add.latte" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Presenters/templates/Note/add.latte">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,13 +67,13 @@
         <option value="$PROJECT_DIR$/www/js/main.js" />
         <option value="$PROJECT_DIR$/app/Forms/NoteFormFactory.php" />
         <option value="$PROJECT_DIR$/app/Presenters/NotePresenter.php" />
-        <option value="$PROJECT_DIR$/app/Presenters/templates/Note/add.latte" />
         <option value="$PROJECT_DIR$/app/Presenters/templates/Note/edit.latte" />
         <option value="$PROJECT_DIR$/app/Model/Storage/FileLoader/XMLLoader.php" />
         <option value="$PROJECT_DIR$/app/Model/Storage/FileLoader/JsonLoader.php" />
         <option value="$PROJECT_DIR$/app/config/common.neon" />
         <option value="$PROJECT_DIR$/app/Model/Preprocessor/TexPreprocessor.php" />
         <option value="$PROJECT_DIR$/app/Model/Preprocessor/MarkdownPreprocessor.php" />
+        <option value="$PROJECT_DIR$/app/Presenters/templates/Note/add.latte" />
       </list>
     </option>
   </component>
@@ -496,7 +507,7 @@
       <workItem from="1582875138583" duration="422000" />
       <workItem from="1582875572320" duration="6851000" />
       <workItem from="1582891072587" duration="9624000" />
-      <workItem from="1582961953439" duration="23041000" />
+      <workItem from="1582961953439" duration="23201000" />
     </task>
     <servers />
   </component>
@@ -518,13 +529,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39938000" />
+    <option name="totallyTimeSpent" value="40098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-1" width="1370" height="745" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.260574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.260574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
@@ -890,14 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Presenters/templates/Note/add.latte">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="73" column="8" selection-start-line="0" selection-start-column="0" selection-end-line="73" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Entity/Note.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="723">
@@ -962,6 +965,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Presenters/templates/Note/add.latte">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="119" selection-start-line="33" selection-start-column="119" selection-end-line="33" selection-end-column="119" />
           <folding />
         </state>
       </provider>

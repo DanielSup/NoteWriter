@@ -32,7 +32,6 @@
                 dataType: 'json',
                 success: function(data){
                     {*  In this function there would be changed the value of the text field - this value is be sent. *}
-                    {*  The element with id #frm-addForm-editRichText would be hidden, if the value is none - by calling hide() on this element. *}
                     $("#frm-addForm-text").val(data["text"]);
                 }
             });

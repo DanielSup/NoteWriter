@@ -32,7 +32,7 @@ class JsonLoader implements ILoader
 
 
     public function appendNoteToFile(Note $note, string $filename){
-        //dummy empty implementatiion - there the note would be appended to the array inside the JSON file and then the JSON file would be updated.
+        //dummy empty implementation - there the note would be appended to the array inside the JSON file and then the JSON file would be updated.
     }
 
     public function changeNoteInFile(Note $note, string $filename){
